@@ -14,8 +14,6 @@ def tester(say, senderID):
                  return "To log a drug taken, type \"Drug Taken\". For more details, type \"Details\" :)"
         else:
             return getIntroNew(" ")
-        
-
     #turn "drugTaken" into "true" 
     #get getDetails if asked for Detailed
     #else turn into "invalid command, try again" 

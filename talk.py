@@ -1,6 +1,21 @@
 import data
 
 def tester(say):
+    #check if id exists in the db array
+    for i in data.patients:
+        if i.PatientID == -1:
+            return getIntro(i.PatientName, data.doctorName, i.Condition)
+    #if the id doesn't exist, give the getIntro
+        elif i.PatientID != -1:
+    #if the id exists, look at the "say"
+            if say == data.drugTaken:
+                i.HasTakenDrug=True
+            elif say == "Details":
+                return getDetails(i.Condition, 
+    
+    #turn "drugTaken" into "true" 
+    #get getDetails if asked for Detailed
+    #else turn into "invalid command, try again" 
     return "How about this!"
 
     

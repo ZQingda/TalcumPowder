@@ -33,32 +33,30 @@ def cycleHandle(a='default'):
 
 def wakeupReminder():
     #iterates through list of patients and reminds each
-    reply(1445503462150740, talk.getReminder("username", "dosage"));
+    reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def morningReminder():
     #iterates through list of patients and reminds each
-    reply(1445503462150740, talk.getReminder("username", "dosage"));
+    reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def noonReminder():
     #iterates through list of patients and reminds each
-    reply(1445503462150740, talk.getReminder("username", "dosage"));
+    reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def afternoonReminder():
     #iterates through list of patients and reminds each
-    reply(1445503462150740, talk.getReminder("username", "dosage"));
+    reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def eveningReminder():
     #iterates through list of patients and reminds each
-    reply(1445503462150740, talk.getReminder("username", "dosage"));
+    reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def nightReminder():
     #iterates through list of patients and reminds each
-    reply(1445503462150740, talk.getReminder("username", "dosage"));
+    reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def cycle2(a='default'):
     reply(1445503462150740, "It's cycling!")
-    s2.enter(300, 1, cycleHandle, argument=('',))
-    s2.enter(300, 2, cycle2, argument=('',))
     s2.enter(15, 1, wakeupReminder, argument=('',))
     s2.enter(30, 1, morningReminder, argument=('',))
     s2.enter(45, 1, noonReminder, argument=('',))

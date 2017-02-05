@@ -10,8 +10,8 @@ def tester(say, senderID):
                 return getHasTakenDrug(i.PatientName)
             elif say == "Details":
                 return getDetails(i.Condition, str(i.Volume) + " " + i.VolumeUnit, str(i.Frequency) + " per " + i.FrequencyUnit)
-            elif say == "Message Doctor":
-                i.DoctorMessage = say
+            elif len(say) >= 13 and say[:13] == "Message Doctor":
+                i.DoctorMessage = say[14:]
                 #reply(DOCTOR_ID, "Your Patient " + i.PatientName + " had this message: " + i.DoctorMessage)
                 return "Your message has been sent to your Doctor."
 

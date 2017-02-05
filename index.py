@@ -29,7 +29,7 @@ def handle_incoming_messages():
     if len(message) >= 14 and message[:14] == "Message Doctor":
         for i in data.patients:
             if i.PatientID == sender:
-                reply(1445503462150740, i.DoctorMessage)
+                reply(1445503462150740, i.PatientName + " : " + i.DoctorMessage)
     return "ok"
 
 s2 = sched.scheduler(time.time, time.sleep)

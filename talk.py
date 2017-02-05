@@ -26,13 +26,13 @@ def tester(say):
     return "How about this! " + say + " "
 
 def getHasTakenDrug(username):
-    return 'You have taken your medicine, {}, great!'.format(username)
+    return 'You have taken your medicine, %s, great!' % (username)
 
 def getIntro(username, doctorName, condition):
-    return 'Hey {}! I am your medicine manager assigned by Dr.{}. You have been prescribed medicine for {}. You will be reminded by me to take your medicine at timed intervals your doctor has provided me. To list the details of this prescription, send <details>. For more information send <help>.'.format(username, doctorName, condition)
+    return 'Hey %s! I am your medicine manager assigned by Dr.%s. You have been prescribed medicine for %s. You will be reminded by me to take your medicine at timed intervals your doctor has provided me. To list the details of this prescription, send <details>. For more information send <help>.' % s(username, doctorName, condition)
 
 def getDetails(condition, dosage, interval):
-    return 'Your have been prescribed medicine for {}. You will be taking {} {}. For details on how to take your medicine, send <details>.'.format(condition, dosage, interval)
+    return 'Your have been prescribed medicine for %s. You will be taking %s %s. For details on how to take your medicine, send <details>.' % (condition, dosage, interval)
 
 def getReminder(username, dosage):
-    return 'Hello {}! Reminder that you need to take {} now!'.format(username, dosage)
+    return 'Hello %s! Reminder that you need to take %s now!' % (username, dosage)

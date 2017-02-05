@@ -24,20 +24,6 @@ def handle_incoming_messages():
     sender = data['entry'][0]['messaging'][0]['sender']['id']
     message = data['entry'][0]['messaging'][0]['message']['text']
 
-    '''s = sched.scheduler(time.time, time.sleep)
-    def send_spam(a='default'):
-        reply(sender, time.time())
-
-    def spam_cycler():
-        send_spam()
-        s.enter(2, 1, send_spam)
-        s.enter(4, 1, send_spam)
-        s.enter(6, 1, send_spam)
-        s.run()
-        send_spam()
-
-    spam_cycler()'''
-
     reply(sender, talk.tester(message) + sender)
  
     return "ok"

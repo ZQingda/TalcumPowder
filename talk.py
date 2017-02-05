@@ -11,14 +11,11 @@ def tester(say, senderID):
             elif say == "Details":
                 return getDetails(i.Condition, str(i.Volume) + " " + i.VolumeUnit, str(i.Frequency) + " " + i.FrequencyUnit)
             else:
-                 return "To log a drug taken, type \"Drug Taken\". For more details, type \"Details\" :)"
-        else:
-            return getIntroNew(" ")
+                 return "Sorry, I didn't catch that. \n To log a drug taken, type \"Drug Taken\". For more details, type \"Details\" :)"
     #turn "drugTaken" into "true" 
     #get getDetails if asked for Detailed
     #else turn into "invalid command, try again" 
-    return "To log a drug taken, type \"Drug Taken\". For more details, type \"Details\" :)"
-
+    return getIntroNew(" ")
     
 #def tester(say):
 #    return "How about this! " + say + " "

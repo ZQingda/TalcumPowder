@@ -2,13 +2,13 @@ from recordclass import recordclass
 
 #Named Tuple for the Patient Data
 
-PatientData = recordclass('PatientData', 'PatientID PatientName Condition Medicine Volume VolumeUnit Frequency FrequencyUnit HasTakenDrug OtherDetails')
+PatientData = recordclass('PatientData', 'PatientID PatientName Condition Medicine Volume VolumeUnit Frequency FrequencyUnit HasTakenDrug OtherDetails DoctorMessage')
 
-joe = PatientData(PatientID='1208205005893863', PatientName='Joe', Condition='diabetes', Medicine='insulin', Volume=100, VolumeUnit='units per mL', Frequency='1', FrequencyUnit='Day', HasTakenDrug=False, OtherDetails='Eat before meals')
+ming = PatientData(PatientID='1208205005893863', PatientName='Ming', Condition='diabetes', Medicine='insulin', Volume=100, VolumeUnit='units per mL', Frequency='1', FrequencyUnit='Day', HasTakenDrug=False, OtherDetails='Eat before meals', DoctorMessage=" ")
 
-esme = PatientData('867521716617637', 'Esme', 'chronic diarrhoea', 'bull testicle pills', 2, 'pills', 'once', 'day', False, 'none')
+michelle = PatientData('867521716617637', 'Ming', 'Anemia', 'Iron tablets', 2, 'pills', '2', 'Day', False, 'none', ' ')
 
-patients = [joe, esme]
+patients = [ming, michelle]
 
 def getData(name):
     return patients[name]

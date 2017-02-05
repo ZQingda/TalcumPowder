@@ -10,6 +10,11 @@ def tester(say, senderID):
                 return getHasTakenDrug(i.PatientName)
             elif say == "Details":
                 return getDetails(i.Condition, str(i.Volume) + " " + i.VolumeUnit, str(i.Frequency) + " per " + i.FrequencyUnit)
+            elif say == "Message Doctor":
+                i.DoctorMessage = say
+                #reply(DOCTOR_ID, "Your Patient " + i.PatientName + " had this message: " + i.DoctorMessage)
+                return "Your message has been sent to your Doctor."
+
             else:
                 return "Sorry, I didn't catch that. \n To log a drug taken, type \"Drug Taken\". For more details, type \"Details\" :)"
     #turn "drugTaken" into "true" 

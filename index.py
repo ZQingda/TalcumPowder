@@ -99,13 +99,13 @@ def nightReminder(a='default'):
 
 def cycle2(a='default'):
     reply(1445503462150740, "It's cycling!")
-    s2.enter(15, 1, wakeupReminder, argument=('',))
-    s2.enter(30, 1, morningReminder, argument=('',))
-    s2.enter(45, 1, noonReminder, argument=('',))
-    s2.enter(60, 1, afternoonReminder, argument=('',))
-    s2.enter(75, 1, eveningReminder, argument=('',))
-    s2.enter(90, 1, nightReminder, argument=('',))
-    s2.enter(105, 2, cycle2, argument=('',))
+    s2.enter(60, 1, wakeupReminder, argument=('',))
+    s2.enter(120, 1, morningReminder, argument=('',))
+    s2.enter(180, 1, noonReminder, argument=('',))
+    s2.enter(240, 1, afternoonReminder, argument=('',))
+    s2.enter(300, 1, eveningReminder, argument=('',))
+    s2.enter(360, 1, nightReminder, argument=('',))
+    s2.enter(420, 2, cycle2, argument=('',))
     data.resetDrugsTaken()
     s2.run()
 

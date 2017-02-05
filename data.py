@@ -4,9 +4,11 @@ from recordclass import recordclass
 
 PatientData = recordclass('PatientData', 'PatientID PatientName Condition Medicine Volume VolumeUnit Frequency FrequencyUnit HasTakenDrug OtherDetails')
 
-joe = PatientData(PatientID='1208205005893863', PatientName='Joe', Condition='Diabetes', Medicine='Insulin', Volume=100, VolumeUnit='units per mL', Frequency='1', FrequencyUnit='Day', HasTakenDrug=False, OtherDetails='Eat before meals')
+joe = PatientData(PatientID='1208205005893863', PatientName='Joe', Condition='diabetes', Medicine='insulin', Volume=100, VolumeUnit='units per mL', Frequency='1', FrequencyUnit='Day', HasTakenDrug=False, OtherDetails='Eat before meals')
 
-patients = [joe]
+esme = PatientData('867521716617637', 'Esme', 'chronic diarrhoea', 'bull testicle pills', 2, 'pills', 'once', 'day', False, 'none')
+
+patients = [joe, esme]
 
 def getData(name):
     return patients[name]

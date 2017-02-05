@@ -6,7 +6,7 @@ PatientData = recordclass('PatientData', 'PatientID PatientName Condition Medici
 
 ming = PatientData(PatientID='1208205005893863', PatientName='Ming', Condition='diabetes', Medicine='insulin', Volume=100, VolumeUnit='units per mL', Frequency='1', FrequencyUnit='Day', DrugsTaken=0, OtherDetails='Eat before meals', DoctorMessage=" ")
 
-michelle = PatientData('867521716617637', 'Ming', 'Anemia', 'Iron tablets', 2, 'pills', '2', 'Day', 0, 'none', ' ')
+michelle = PatientData('867521716617637', 'Michelle', 'Anemia', 'Iron tablets', 2, 'pills', '2', 'Day', 0, 'none', ' ')
 
 patients = [ming, michelle]
 

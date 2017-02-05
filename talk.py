@@ -7,15 +7,15 @@ def tester(say):
         if i.PatientID == -1:
             return getIntro(i.PatientName, data.doctorName, i.Condition)
     #if the id doesn't exist, give the getIntro
-        elif i.PatientID != -1:
+        else:
     #if the id exists, look at the "say"
             if say == data.drugTaken:
                 i.HasTakenDrug=True
                 return getHasTakenDrug(i.PatientName)
             elif say == "Details":
                 return getDetails(i.Condition, str(i.Volume) + " " + i.VolumeUnit, str(i.Frequency) + " " + i.FrequencyUnit)
-        else:
-            return data.invalidCommand
+            else:
+                return data.invalidCommand
 
     #turn "drugTaken" into "true" 
     #get getDetails if asked for Detailed
@@ -30,7 +30,7 @@ def getHasTakenDrug(username):
     return 'You have taken your medicine, %s, great!' % (username)
 
 def getIntro(username, doctorName, condition):
-    return 'Hey %s! I am your medicine manager assigned by Dr.%s. You have been prescribed medicine for %s. You will be reminded by me to take your medicine at timed intervals your doctor has provided me. To list the details of this prescription, send <details>. For more information send <help>.' % s(username, doctorName, condition)
+    return 'Hey %s! I am your medicine manager assigned by Dr.%s. You have been prescribed medicine for %s. You will be reminded by me to take your medicine at timed intervals your doctor has provided me. To list the details of this prescription, send <details>. For more information send <help>.' % (username, doctorName, condition)
 
 def getDetails(condition, dosage, interval):
     return 'Your have been prescribed medicine for %s. You will be taking %s %s. For details on how to take your medicine, send <details>.' % (condition, dosage, interval)

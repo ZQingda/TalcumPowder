@@ -21,9 +21,9 @@ def reply(user_id, msg):
  
 @app.route('/', methods=['POST'])
 def handle_incoming_messages():
-    data1 = request.json
-    sender = data1['entry'][0]['messaging'][0]['sender']['id']
-    message = data1['entry'][0]['messaging'][0]['message']['text']
+    data = request.json
+    sender = data['entry'][0]['messaging'][0]['sender']['id']
+    message = data['entry'][0]['messaging'][0]['message']['text']
     
     reply(sender, talk.tester(message, sender))
     if message == "Message Doctor":

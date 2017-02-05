@@ -11,9 +11,9 @@ def tester(say):
     #if the id exists, look at the "say"
             if say == data.drugTaken:
                 i.HasTakenDrug=True
-                return 
+                return getHasTakenDrug(i.PatientName)
             elif say == "Details":
-                return getDetails(i.Condition, i.Volume + " " + i.VolumeUnit, i.Frequency + " " + i.FrequencyUnit)
+                return getDetails(i.Condition, str(i.Volume) + " " + i.VolumeUnit, str(i.Frequency) + " " + i.FrequencyUnit)
         else:
             return data.invalidCommand
 

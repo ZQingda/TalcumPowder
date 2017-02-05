@@ -11,12 +11,14 @@ def tester(say):
             if say == data.drugTaken:
                 i.HasTakenDrug=True
             elif say == "Details":
-                return getDetails(i.Condition, 
+                return getDetails(i.Condition, i.Volume + " " + i.VolumeUnit, i.Frequency + " " + i.FrequencyUnit)
+        else:
+            return data.invalidCommand
     
     #turn "drugTaken" into "true" 
     #get getDetails if asked for Detailed
     #else turn into "invalid command, try again" 
-    return "How about this!"
+    return ":) :)!"
 
     
 def tester(say):

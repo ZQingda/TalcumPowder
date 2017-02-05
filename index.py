@@ -26,7 +26,7 @@ def handle_incoming_messages():
     message = data1['entry'][0]['messaging'][0]['message']['text']
     
     reply(sender, talk.tester(message, sender))
-    if message == "Message Doctor":
+    if message >= 14 and message[:14] == "Message Doctor":
         for i in data.patients:
             if i.PatientID == sender:
                 reply(1445503462150740, i.DoctorMessage)

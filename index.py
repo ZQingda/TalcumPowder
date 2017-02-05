@@ -40,7 +40,7 @@ def wakeupReminder(a='default'):
     #iterates through list of patients and reminds each
     for i in data.patients:
         if i.PatientID != -1: #this would mean that a user is not properly set up yet
-            if i.DrugsTaken < i.Frequency:
+            if i.DrugsTaken < int(i.Frequency):
                 reply(i.PatientID, "Wake up!")
                 reply(i.PatientID, talk.getReminder(i.PatientName, str(i.Volume) + " " + i.VolumeUnit + " of " + i.Medicine))
 
@@ -50,7 +50,7 @@ def wakeupReminder(a='default'):
 def morningReminder(a='default'):
     for i in data.patients:
         if i.PatientID != -1: #this would mean that a user is not properly set up yet
-            if i.DrugsTaken < i.Frequency:
+            if i.DrugsTaken < int(i.Frequency):
                 reply(i.PatientID, "Wake up!")
                 reply(i.PatientID, talk.getReminder(i.PatientName, str(i.Volume) + " " + i.VolumeUnit + " of " + i.Medicine))
  #iterates through list of patients and reminds each
@@ -60,7 +60,7 @@ def morningReminder(a='default'):
 def noonReminder(a='default'):
     for i in data.patients:
         if i.PatientID != -1: #this would mean that a user is not properly set up yet
-            if i.DrugsTaken < i.Frequency:
+            if i.DrugsTaken < int(i.Frequency):
                 reply(i.PatientID, "Wake up!")
                 reply(i.PatientID, talk.getReminder(i.PatientName, str(i.Volume) + " " + i.VolumeUnit + " of " + i.Medicine))
 #iterates through list of patients and reminds each
@@ -70,7 +70,7 @@ def noonReminder(a='default'):
 def afternoonReminder(a='default'):
     for i in data.patients:
         if i.PatientID != -1: #this would mean that a user is not properly set up yet
-            if i.DrugsTaken < i.Frequency:
+            if i.DrugsTaken < int(i.Frequency):
                 reply(i.PatientID, "Wake up!")
                 reply(i.PatientID, talk.getReminder(i.PatientName, str(i.Volume) + " " + i.VolumeUnit + " of " + i.Medicine))
 #iterates through list of patients and reminds each
@@ -80,7 +80,7 @@ def afternoonReminder(a='default'):
 def eveningReminder(a='default'):
     for i in data.patients:
         if i.PatientID != -1: #this would mean that a user is not properly set up yet
-            if i.DrugsTaken < i.Frequency:
+            if i.DrugsTaken < int(i.Frequency):
                 reply(i.PatientID, "Wake up!")
                 reply(i.PatientID, talk.getReminder(i.PatientName, str(i.Volume) + " " + i.VolumeUnit + " of " + i.Medicine))
 #iterates through list of patients and reminds each
@@ -90,7 +90,7 @@ def eveningReminder(a='default'):
 def nightReminder(a='default'):
     for i in data.patients:
         if i.PatientID != -1: #this would mean that a user is not properly set up yet
-            if i.DrugsTaken < i.Frequency:
+            if i.DrugsTaken < int(i.Frequency):
                 reply(i.PatientID, "Wake up!")
                 reply(i.PatientID, talk.getReminder(i.PatientName, str(i.Volume) + " " + i.VolumeUnit + " of " + i.Medicine))
 #iterates through list of patients and reminds each

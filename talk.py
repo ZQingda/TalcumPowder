@@ -22,8 +22,8 @@ def tester(say):
     return ":) :)!"
 
     
-def tester(say):
-    return "How about this! " + say + " "
+#def tester(say):
+#    return "How about this! " + say + " "
 
 def getHasTakenDrug(username):
     return 'You have taken your medicine, %s, great!' % (username)

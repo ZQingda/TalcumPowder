@@ -31,32 +31,32 @@ s2 = sched.scheduler(time.time, time.sleep)
 def cycleHandle(a='default'):
     reply(1445503462150740, time.time())
 
-def wakeupReminder():
+def wakeupReminder(a='default'):
     #iterates through list of patients and reminds each
     reply(1445503462150740, "Wake up!")
     reply(1445503462150740, talk.getReminder("username", "dosage"))
 
-def morningReminder():
+def morningReminder(a='default'):
     #iterates through list of patients and reminds each
     reply(1445503462150740, "Good morning!")
     reply(1445503462150740, talk.getReminder("username", "dosage"))
 
-def noonReminder():
+def noonReminder(a='default'):
     #iterates through list of patients and reminds each
     reply(1445503462150740, "It's high noon!")
     reply(1445503462150740, talk.getReminder("username", "dosage"))
 
-def afternoonReminder():
+def afternoonReminder(a='default'):
     #iterates through list of patients and reminds each
     reply(1445503462150740, "It's slightly past midday.")
     reply(1445503462150740, talk.getReminder("username", "dosage"))
 
-def eveningReminder():
+def eveningReminder(a='default'):
     #iterates through list of patients and reminds each
     reply(1445503462150740, "Good evening!")
     reply(1445503462150740, talk.getReminder("username", "dosage"))
 
-def nightReminder():
+def nightReminder(a='default'):
     #iterates through list of patients and reminds each
     reply(1445503462150740, "Good night!")
     reply(1445503462150740, talk.getReminder("username", "dosage"))

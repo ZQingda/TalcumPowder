@@ -16,7 +16,7 @@ def tester(say, senderID):
                 return "Your message has been sent to your Doctor."
 
             else:
-                return "Sorry, I didn't catch that. \n To log a drug taken, type \"Drug Taken\". For more details, type \"Details\. To message your doctor, use \"Message Doctor <insert message>\"" :)"
+                return "Sorry, I didn't catch that. \n To log a drug taken, type \"Drug Taken\". For more details, type \"Details\. To message your doctor, use \"Message Doctor <insert message>\""
     #turn "drugTaken" into "true" 
     #get getDetails if asked for Detailed
     #else turn into "invalid command, try again" 

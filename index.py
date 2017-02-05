@@ -8,7 +8,6 @@ app = Flask(__name__)
  
 ACCESS_TOKEN = "EAAITqsZBZAlFoBADKkz3kbZCjce9tcsZB93BRbifwCozsQqHLlO4OBmRnBWZBU9kzYScXivOeoO5A5yJjYMlPZAraZBHfa9AL6An7cOxApqGEfEjmRk8q9lD769S9gtI0WGHzBER94awX1g4pepPDjEkm8GiZBzaxcpfHrFJRQQw8QZDZD"
  
- 
 def reply(user_id, msg):
     data = {
         "recipient": {"id": user_id},
@@ -32,10 +31,41 @@ s2 = sched.scheduler(time.time, time.sleep)
 def cycleHandle(a='default'):
     reply(1445503462150740, time.time())
 
+def wakeupReminder():
+    ```iterates through list of patients and reminds each
+    reply(1445503462150740, talk.getReminder("username", "dosage"));
+
+def morningReminder():
+    ```iterates through list of patients and reminds each
+    reply(1445503462150740, talk.getReminder("username", "dosage"));
+
+def noonReminder():
+    ```iterates through list of patients and reminds each
+    reply(1445503462150740, talk.getReminder("username", "dosage"));
+
+def afternoonReminder():
+    ```iterates through list of patients and reminds each
+    reply(1445503462150740, talk.getReminder("username", "dosage"));
+
+def eveningReminder():
+    ```iterates through list of patients and reminds each
+    reply(1445503462150740, talk.getReminder("username", "dosage"));
+
+def nightReminder():
+    ```iterates through list of patients and reminds each
+    reply(1445503462150740, talk.getReminder("username", "dosage"));
+
 def cycle2(a='default'):
     reply(1445503462150740, "It's cycling!")
     s2.enter(300, 1, cycleHandle, argument=('',))
     s2.enter(300, 2, cycle2, argument=('',))
+    s2.enter(15, 1, wakeupReminder, argument=('',))
+    s2.enter(30, 1, morningReminder, argument=('',))
+    s2.enter(45, 1, noonReminder, argument=('',))
+    s2.enter(60, 1, afternoonReminder, argument=('',))
+    s2.enter(75, 1, eveningReminder, argument=('',))
+    s2.enter(90, 1, nightReminder, argument=('',))
+    s2.enter(105, 2, cycle2, argument=('',))
     s2.run()
 
 '''cycle2()'''

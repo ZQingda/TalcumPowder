@@ -24,9 +24,12 @@ def handle_incoming_messages():
     data = request.json
     sender = data['entry'][0]['messaging'][0]['sender']['id']
     message = data['entry'][0]['messaging'][0]['message']['text']
-
+    
     reply(sender, talk.tester(message, sender))
- 
+    if message == "Message Doctor":
+        for i in data.patients:
+            if i.PatientID == sender:
+                reply(doctorID, i.DoctorMessage)
     return "ok"
 
 s2 = sched.scheduler(time.time, time.sleep)

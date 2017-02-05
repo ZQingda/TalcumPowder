@@ -6,7 +6,7 @@ def tester(say, senderID):
     for i in data.patients:
         if i.PatientID == senderID:
             if say == data.drugTaken:
-                i.HasTakenDrug=True
+                i.DrugsTaken += 1
                 return getHasTakenDrug(i.PatientName)
             elif say == "Details":
                 return getDetails(i.Condition, str(i.Volume) + " " + i.VolumeUnit, str(i.Frequency) + " per " + i.FrequencyUnit)

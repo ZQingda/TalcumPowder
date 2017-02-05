@@ -32,27 +32,27 @@ def cycleHandle(a='default'):
     reply(1445503462150740, time.time())
 
 def wakeupReminder():
-    ```iterates through list of patients and reminds each
+    #iterates through list of patients and reminds each
     reply(1445503462150740, talk.getReminder("username", "dosage"));
 
 def morningReminder():
-    ```iterates through list of patients and reminds each
+    #iterates through list of patients and reminds each
     reply(1445503462150740, talk.getReminder("username", "dosage"));
 
 def noonReminder():
-    ```iterates through list of patients and reminds each
+    #iterates through list of patients and reminds each
     reply(1445503462150740, talk.getReminder("username", "dosage"));
 
 def afternoonReminder():
-    ```iterates through list of patients and reminds each
+    #iterates through list of patients and reminds each
     reply(1445503462150740, talk.getReminder("username", "dosage"));
 
 def eveningReminder():
-    ```iterates through list of patients and reminds each
+    #iterates through list of patients and reminds each
     reply(1445503462150740, talk.getReminder("username", "dosage"));
 
 def nightReminder():
-    ```iterates through list of patients and reminds each
+    #iterates through list of patients and reminds each
     reply(1445503462150740, talk.getReminder("username", "dosage"));
 
 def cycle2(a='default'):

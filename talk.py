@@ -9,4 +9,4 @@ joe = PatientData(PatientID='1208205005893863', PatientName='joe', Condition='Di
 PatientArray = [joe]
 
 def tester(say):
-    return "How about this!"
+    return "How about this! " + say + " "

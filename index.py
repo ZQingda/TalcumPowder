@@ -2,6 +2,7 @@ from flask import Flask, request
 import requests
 import talk
 import sched, time
+import threading
 
 app = Flask(__name__)
  
@@ -48,12 +49,43 @@ def cycleHandle(a='default'):
 def cycle2(a='default'):
     reply(1445503462150740, time.time())
     reply(1445503462150740, "It's cycling!")
-    s2.enter(4, 1, cycleHandle, argument=('',))
-    s2.enter(4, 2, cycle2, argument=('',))
+    s2.enter(300, 1, cycleHandle, argument=('',))
+    s2.enter(300, 2, cycle2, argument=('',))
     s2.run()
 
-cycle2()
+'''cycle2()'''
+def appRun():
+    app.run(debug=False)
+
+class appThread (threading.Thread):
+   def __init__(self, threadID, name, counter):
+      threading.Thread.__init__(self)
+      self.threadID = threadID
+      self.name = name
+      self.counter = counter
+   def run(self):
+      print ("Starting " + self.name)
+      appRun()
+      print ("Exiting " + self.name)
+
+class spamThread (threading.Thread):
+   def __init__(self, threadID, name, counter):
+      threading.Thread.__init__(self)
+      self.threadID = threadID
+      self.name = name
+      self.counter = counter
+   def run(self):
+      print ("Starting " + self.name)
+      cycle2()
+      print ("Exiting " + self.name)
+
+thread1 = appThread(1, "Thread-App", 1)
+thread2 = spamThread(2, "Thread-Spam", 2)
+
+thread1.start()
+thread2.start()
  
- 
+''' 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True)'''
+

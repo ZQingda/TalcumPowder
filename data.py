@@ -1,4 +1,4 @@
-import recordclass
+from recordclass import recordclass
 
 #Named Tuple for the Patient Data
 

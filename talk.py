@@ -10,6 +10,7 @@ def tester(say):
     #if the id exists, look at the "say"
             if say == data.drugTaken:
                 i.HasTakenDrug=True
+                return 
             elif say == "Details":
                 return getDetails(i.Condition, i.Volume + " " + i.VolumeUnit, i.Frequency + " " + i.FrequencyUnit)
         else:
@@ -24,6 +25,8 @@ def tester(say):
 def tester(say):
     return "How about this! " + say + " "
 
+def getHasTakenDrug(username):
+    return 'You have taken your medicine, {}, great!'.format(username)
 
 def getIntro(username, doctorName, condition):
     return 'Hey {}! I am your medicine manager assigned by Dr.{}. You have been prescribed medicine for {}. You will be reminded by me to take your medicine at timed intervals your doctor has provided me. To list the details of this prescription, send <details>. For more information send <help>.'.format(username, doctorName, condition)

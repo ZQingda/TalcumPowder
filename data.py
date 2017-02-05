@@ -2,11 +2,11 @@ from recordclass import recordclass
 
 #Named Tuple for the Patient Data
 
-PatientData = recordclass('PatientData', 'PatientID PatientName Condition Medicine Volume VolumeUnit Frequency FrequencyUnit HasTakenDrug OtherDetails DoctorMessage')
+PatientData = recordclass('PatientData', 'PatientID PatientName Condition Medicine Volume VolumeUnit Frequency FrequencyUnit DrugsTaken OtherDetails DoctorMessage')
 
-ming = PatientData(PatientID='1208205005893863', PatientName='Ming', Condition='diabetes', Medicine='insulin', Volume=100, VolumeUnit='units per mL', Frequency='1', FrequencyUnit='Day', HasTakenDrug=False, OtherDetails='Eat before meals', DoctorMessage=" ")
+ming = PatientData(PatientID='1208205005893863', PatientName='Ming', Condition='diabetes', Medicine='insulin', Volume=100, VolumeUnit='units per mL', Frequency='1', FrequencyUnit='Day', drugsTaken=0, OtherDetails='Eat before meals', DoctorMessage=" ")
 
-michelle = PatientData('867521716617637', 'Ming', 'Anemia', 'Iron tablets', 2, 'pills', '2', 'Day', False, 'none', ' ')
+michelle = PatientData('867521716617637', 'Ming', 'Anemia', 'Iron tablets', 2, 'pills', '2', 'Day', 0, 'none', ' ')
 
 patients = [ming, michelle]
 

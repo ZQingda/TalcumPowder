@@ -61,8 +61,8 @@ def noonReminder(a='default'):
                 reply(i.PatientID, "Wake up!")
                 reply(i.PatientID, talk.getReminder("username", "dosage"))
 #iterates through list of patients and reminds each
-    reply(1445503462150740, "It's high noon!")
-    reply(1445503462150740, talk.getReminder("username", "dosage"))
+    #reply(1445503462150740, "It's high noon!")
+    #reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def afternoonReminder(a='default'):
     for i in data.patients:

@@ -3,6 +3,7 @@ import requests
 import talk
 import sched, time
 import threading
+import data
 
 app = Flask(__name__)
  
@@ -34,33 +35,64 @@ def cycleHandle(a='default'):
 
 def wakeupReminder(a='default'):
     #iterates through list of patients and reminds each
-    reply(1445503462150740, "Wake up!")
-    reply(1445503462150740, talk.getReminder("username", "dosage"))
+    for i in data.patients:
+        if i.PatientID != -1: #this would mean that a user is not properly set up yet
+            if i.HasTakenDrug == False:
+                reply(i.PatientID, "Wake up!")
+                reply(i.PatientID, talk.getReminder("username", "dosage"))
+            
+    #reply(1445503462150740, "Wake up!")
+    #reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def morningReminder(a='default'):
-    #iterates through list of patients and reminds each
-    reply(1445503462150740, "Good morning!")
-    reply(1445503462150740, talk.getReminder("username", "dosage"))
+    for i in data.patients:
+        if i.PatientID != -1: #this would mean that a user is not properly set up yet
+            if i.HasTakenDrug == False:
+                reply(i.PatientID, "Wake up!")
+                reply(i.PatientID, talk.getReminder("username", "dosage"))
+ #iterates through list of patients and reminds each
+    #reply(1445503462150740, "Good morning!")
+    #reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def noonReminder(a='default'):
-    #iterates through list of patients and reminds each
+    for i in data.patients:
+        if i.PatientID != -1: #this would mean that a user is not properly set up yet
+            if i.HasTakenDrug == False:
+                reply(i.PatientID, "Wake up!")
+                reply(i.PatientID, talk.getReminder("username", "dosage"))
+#iterates through list of patients and reminds each
     reply(1445503462150740, "It's high noon!")
     reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def afternoonReminder(a='default'):
-    #iterates through list of patients and reminds each
-    reply(1445503462150740, "It's slightly past midday.")
-    reply(1445503462150740, talk.getReminder("username", "dosage"))
+    for i in data.patients:
+        if i.PatientID != -1: #this would mean that a user is not properly set up yet
+            if i.HasTakenDrug == False:
+                reply(i.PatientID, "Wake up!")
+                reply(i.PatientID, talk.getReminder("username", "dosage"))
+#iterates through list of patients and reminds each
+    #reply(1445503462150740, "It's slightly past midday.")
+    #reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def eveningReminder(a='default'):
-    #iterates through list of patients and reminds each
-    reply(1445503462150740, "Good evening!")
-    reply(1445503462150740, talk.getReminder("username", "dosage"))
+    for i in data.patients:
+        if i.PatientID != -1: #this would mean that a user is not properly set up yet
+            if i.HasTakenDrug == False:
+                reply(i.PatientID, "Wake up!")
+                reply(i.PatientID, talk.getReminder("username", "dosage"))
+#iterates through list of patients and reminds each
+    #reply(1445503462150740, "Good evening!")
+    #reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def nightReminder(a='default'):
-    #iterates through list of patients and reminds each
-    reply(1445503462150740, "Good night!")
-    reply(1445503462150740, talk.getReminder("username", "dosage"))
+    for i in data.patients:
+        if i.PatientID != -1: #this would mean that a user is not properly set up yet
+            if i.HasTakenDrug == False:
+                reply(i.PatientID, "Wake up!")
+                reply(i.PatientID, talk.getReminder("username", "dosage"))
+#iterates through list of patients and reminds each
+    #reply(1445503462150740, "Good night!")
+    #reply(1445503462150740, talk.getReminder("username", "dosage"))
 
 def cycle2(a='default'):
     reply(1445503462150740, "It's cycling!")

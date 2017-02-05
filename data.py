@@ -18,6 +18,10 @@ def addPatient(id, name, condition, medicine, volume, volumeUnit, freq, freqUnit
     patients.append(patient)
     return "You have been added to the database."
 
+def resetDrugsTaken():
+    for i in patients:
+        i.DrugsTaken=0
+
 doctorName = "Dr.Stein"
 
 drugTaken = "Drug Taken"
